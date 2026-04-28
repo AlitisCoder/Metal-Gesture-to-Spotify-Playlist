@@ -1,2 +1,2 @@
 # Metal-Gesture-to-Spotify-Playlist
-I built this for a friend of mine. We both like rock music and created a playlist. It's the foundation of our friendship really, I just have to adapt it somehow and put it into a website. 
+I built this for a friend of mine. We both like rock music and created a playlist. It's the foundation of our friendship really.
