@@ -2,10 +2,8 @@ import cv2
 import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
-import webbrowser
 import time
-import urllib.request
-import os
+import webbrowser as web
 
 # Spotify Playlist
 SPOTIFY_URL = "https://open.spotify.com/playlist/2pUqkWhPN35vwvIG2QSVnl"
@@ -13,16 +11,6 @@ SPOTIFY_URL = "https://open.spotify.com/playlist/2pUqkWhPN35vwvIG2QSVnl"
 HOLD_FRAMES_REQUIRED = 20
 COOLDOWN_SECONDS = 5 
 MODEL_PATH = "hand_landmarker.task"
-
-# Modell automatisch herunterladen falls nicht vorhanden
-if not os.path.exists(MODEL_PATH):
-    print("Lade Hand-Modell herunter (~8MB)...")
-    urllib.request.urlretrieve(
-        "https://storage.googleapis.com/mediapipe-models/hand_landmarker/"
-        "hand_landmarker/float16/1/hand_landmarker.task",
-        MODEL_PATH
-    )
-    print("Modell bereit!")
 
 
 def draw_landmarks(frame, landmarks):
@@ -116,7 +104,7 @@ with vision.HandLandmarker.create_from_options(options) as landmarker:
 
         # Ausloesen
         if hold_counter >= HOLD_FRAMES_REQUIRED and not cooldown_active:
-            webbrowser.open(SPOTIFY_URL)
+            web.open(SPOTIFY_URL)
             last_trigger_time = now
             hold_counter = 0
             triggered = True
