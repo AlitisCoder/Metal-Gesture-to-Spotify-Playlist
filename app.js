@@ -1,4 +1,4 @@
-import { HandLandmarker, FilesetResolver } from "@mediapipe/tasks-vision";
+import { HandLandmarker, FilesetResolver } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs";
 
 // ── Config ──
 const SPOTIFY_URL   = "https://open.spotify.com/playlist/2pUqkWhPN35vwvIG2QSVnl";
