@@ -1,2 +1,2 @@
 # Metal-Gesture-to-Spotify-Playlist
-I built this for a friend of mine. We both like rock music and created a playlist. It's the foundation of our friendship really.
+Ich habe das für meinen Brochacho programmiert; es gibt zwei Branches: einmal nur Python Script und einmal die Web App. 
